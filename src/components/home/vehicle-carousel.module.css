@@ -1,0 +1,19 @@
+.carousel { width: 340px; max-width: 100%; }
+.cardControls { position: relative; }
+.slides { display: grid; }
+.slide { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity 180ms ease; }
+.slide[data-active="true"] { opacity: 1; visibility: visible; }
+.image { display: block; object-fit: contain; }
+.arrow { position: absolute; top: 45%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #ddd8cd; border-radius: 50%; background: var(--background); color: var(--muted); box-shadow: var(--shadow-soft); transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease; }
+.arrow svg { width: 18px; height: 18px; }
+.previous { left: -16px; }
+.previous svg { transform: rotate(180deg); }
+.next { right: -16px; }
+.arrow:hover { color: var(--brand); border-color: #b9b2a5; background: var(--surface-raised); }
+.pagination { display: flex; justify-content: center; margin-top: 6px; }
+.dot { display: flex; justify-content: center; align-items: center; width: 44px; height: 44px; border: 0; background: transparent; }
+.dot span { width: 6px; height: 6px; border-radius: 50%; background: #888477; }
+.dot[aria-pressed="true"] span { background: var(--brand); }
+.dot:hover span { background: var(--foreground); }
+@media (max-width: 390px) { .carousel { width: 280px; } }
+@media (prefers-reduced-motion: reduce) { .slide, .arrow { transition: none; } }

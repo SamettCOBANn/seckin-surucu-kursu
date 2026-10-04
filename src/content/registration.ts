@@ -11,3 +11,12 @@ export const registrationPolicy = {
   requiresCompleteDocuments: true,
   overrides: [],
 } as const satisfies RegistrationPolicy;
+
+// Registration checklist supplied by the business; kept separate from cutoff policy.
+export const registrationDocuments = [
+  "2 Adet Biyometrik Fotoğraf",
+  "Diploma Aslı",
+  "E-Devlet Sağlık Raporu",
+  "E-Devlet Adli Sicil Kaydı",
+  "Kan Grubu",
+] as const satisfies readonly string[];

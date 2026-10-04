@@ -1,6 +1,7 @@
 import type { SocialProfile } from "@/types/business";
 
 const instagramUsername = "68seckinsurucukursu";
+const tiktokUsername = "sekin.src.kursu";
 
 // Both channels belong in the same section with equal visual importance.
 export const socialProfiles = [
@@ -14,7 +15,7 @@ export const socialProfiles = [
   },
   {
     platform: "tiktok",
-    username: null,
-    destination: { status: "not-provided", url: null },
+    username: tiktokUsername,
+    destination: { status: "available", url: `https://www.tiktok.com/@${tiktokUsername}` },
   },
 ] as const satisfies readonly SocialProfile[];

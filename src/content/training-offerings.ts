@@ -4,6 +4,7 @@ export const trainingOfferings = [
   {
     id: "b-manual",
     slug: "b-manuel",
+    detailHref: "/egitimler/b-sinifi",
     name: "B Sınıfı Manuel Vites Eğitimi",
     category: "B",
     transmission: "manual",
@@ -11,10 +12,11 @@ export const trainingOfferings = [
   {
     id: "b-automatic",
     slug: "b-otomatik",
+    detailHref: "/egitimler/b-sinifi",
     name: "B Sınıfı Otomatik Vites Eğitimi",
     category: "B",
     transmission: "automatic",
   },
-  { id: "a1", slug: "a1", name: "A1 Motosiklet Eğitimi", category: "A1", transmission: null },
-  { id: "a2", slug: "a2", name: "A2 Motosiklet Eğitimi", category: "A2", transmission: null },
+  { id: "a1", slug: "a1", detailHref: "/egitimler/a1", name: "A1 Motosiklet Eğitimi", category: "A1", transmission: null },
+  { id: "a2", slug: "a2", detailHref: "/egitimler/a2", name: "A2 Motosiklet Eğitimi", category: "A2", transmission: null },
 ] as const satisfies readonly TrainingOffering[];
