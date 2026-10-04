@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Icon } from "@/components/site/icon";
 import { getBusiness, getPricing } from "@/lib/content";
@@ -9,10 +9,9 @@ import styles from "./pricing.module.css";
 const pricing = getPricing();
 const business = getBusiness();
 
-export const metadata: Metadata = {
-  title: `${pricing.year} Kurs ve Ehliyet Ücretleri | ${business.name}`,
-  description: `${business.address.city} ${business.name} ${pricing.year} kurs, eğitim ve direksiyon sınavı ücretleri. Resmî sürücü belgesi ücretleri ayrı olarak gösterilir.`,
-};
+export const metadata = pageMetadata("/fiyatlar",
+  `${pricing.year} Kurs ve Ehliyet Ücretleri | ${business.name}`,
+  `${business.address.city} ${business.name} ${pricing.year} kurs, eğitim ve direksiyon sınavı ücretleri. Resmî sürücü belgesi ücretleri ayrı olarak gösterilir.`);
 
 function SourceNote({ source }: { source: PricingSource }) {
   return (

@@ -6,6 +6,7 @@ import { socialProfiles } from "@/content/social";
 import { trainingOfferings } from "@/content/training-offerings";
 import { trainingGuides, trainingOverviewParagraphs, trainingProcess, trainingSources } from "@/content/training-guides";
 import { vehicles } from "@/content/vehicles";
+import { site } from "@/content/site";
 import type { BusinessProfile, ExternalServices, SocialProfile } from "@/types/business";
 import type { PricingContent } from "@/types/pricing";
 import type { RegistrationPolicy } from "@/types/registration";
@@ -15,6 +16,10 @@ import type { TrainingCategory, TrainingGuide, TrainingOffering, TrainingProcess
 // Explicit return types keep consumers independent of the local literal records.
 export function getBusiness(): BusinessProfile {
   return business;
+}
+
+export function getSite(): typeof site {
+  return site;
 }
 
 export function getSocialProfiles(): readonly SocialProfile[] {

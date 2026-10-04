@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Icon } from "@/components/site/icon";
 import { VehiclePreview } from "@/components/home/vehicle-preview";
@@ -7,10 +7,9 @@ import { getBusiness, getTrainingGuides, getTrainingOfferings, getTrainingOvervi
 import styles from "@/components/training/training.module.css";
 
 const business = getBusiness();
-export const metadata: Metadata = {
-  title: `${business.address.city} Ehliyet Eğitimleri: B, A1 ve A2 | ${business.name}`,
-  description: `${business.address.city} ${business.name} B sınıfı manuel ve otomatik, A1 ve A2 motosiklet eğitimleri. Yaş koşullarını, eğitim seçeneklerini ve kayıt adımlarını karşılaştırın.`,
-};
+export const metadata = pageMetadata("/egitimler",
+  `${business.address.city} Ehliyet Eğitimleri: B, A1 ve A2 | ${business.name}`,
+  `${business.address.city} ${business.name} B sınıfı manuel ve otomatik, A1 ve A2 motosiklet eğitimleri. Yaş koşullarını, eğitim seçeneklerini ve kayıt adımlarını karşılaştırın.`);
 
 export default function TrainingOverviewPage() {
   const guides = getTrainingGuides();
